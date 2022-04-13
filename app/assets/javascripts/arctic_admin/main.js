@@ -59,6 +59,9 @@ function removeListeners() {
     .forEach(([element, clickHandler]) => element()?.removeEventListener('click', clickHandler))
 }
 
+
+document.addEventListener('DOMContentLoaded', addListeners)
+
 document.addEventListener('turbo:load', () => {
   removeListeners()
   addListeners()
